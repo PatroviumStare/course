@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Вход — Дайджест</title>
+    <link rel="stylesheet" href="../assets/css/app.css" />
+  </head>
+  <body data-page="auth">
+    <header class="site-header">
+      <a class="wordmark" href="../index.html"
+        ><span class="brand-symbol">Д</span><span>ДАЙДЖЕСТ</span></a
+      ><a class="text-button" href="../index.html">К новостям</a
+      ><button
+        class="icon-button theme-toggle"
+        type="button"
+        aria-label="Переключить тему"
+        title="Переключить тему"
+      >
+        ◐
+      </button>
+    </header>
+    <div class="flash-message" id="notice" role="status" hidden></div>
+    <main class="form-panel">
+      <p class="eyebrow">Личный кабинет</p>
+      <h1>Войти</h1>
+      <p>Продолжите чтение и управление публикациями.</p>
+      <form id="login-form">
+        <label class="form-field"
+          >Электронная почта<input
+            class="form-control"
+            type="email"
+            name="email"
+            autocomplete="email"
+            required /></label
+        ><label class="form-field"
+          >Пароль<input
+            class="form-control"
+            type="password"
+            name="password"
+            autocomplete="current-password"
+            required /></label
+        ><button class="primary-button form-submit" type="submit">Войти</button>
+      </form>
+      <p class="form-note">
+        Нет аккаунта?
+        <a href="../register/index.html"><strong>Регистрация</strong></a>
+      </p>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">Дайджест · новости с контекстом</div>
+      <nav class="footer-links">
+        <a href="../index.html">Главная</a
+        ><a href="../readme/README.md">Документация</a>
+      </nav>
+      <small>2026</small>
+    </footer>
+    <script src="../assets/js/app.js" defer></script>
+  </body>
+</html>

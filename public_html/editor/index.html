@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Редактор статьи — Дайджест</title>
+    <link rel="stylesheet" href="../assets/css/app.css" />
+  </head>
+  <body data-page="editor">
+    <header class="site-header">
+      <a class="wordmark" href="../index.html"
+        ><span class="brand-symbol">Д</span><span>ДАЙДЖЕСТ</span></a
+      ><a class="text-button" href="../dashboard/index.html">В панель</a
+      ><button
+        class="icon-button theme-toggle"
+        type="button"
+        aria-label="Переключить тему"
+        title="Переключить тему"
+      >
+        ◐</button
+      ><span id="account-actions"></span>
+    </header>
+    <div class="flash-message" id="notice" role="status" hidden></div>
+    <main class="form-panel">
+      <p class="eyebrow">Рабочее место автора</p>
+      <h1 id="editor-heading">Новая статья</h1>
+      <p>После отправки материал появится в очереди модерации.</p>
+      <form id="article-form">
+        <input type="hidden" name="article_id" id="article-id" /><label
+          class="form-field"
+          >Заголовок<input
+            class="form-control"
+            name="title"
+            maxlength="220"
+            minlength="8"
+            required /></label
+        ><label class="form-field"
+          >Подзаголовок<input
+            class="form-control"
+            name="subtitle"
+            maxlength="300"
+            minlength="10"
+            required /></label
+        ><label class="form-field"
+          >Рубрика<select
+            class="form-control"
+            name="category_id"
+            id="category-select"
+            required
+          >
+            <option value="">Выберите рубрику</option>
+          </select></label
+        ><label class="form-field">Текст статьи</label>
+        <div
+          class="editor-toolbar"
+          role="toolbar"
+          aria-label="Форматирование текста"
+        >
+          <button
+            type="button"
+            data-editor-command="bold"
+            aria-label="Полужирный"
+          >
+            <strong>B</strong></button
+          ><button
+            type="button"
+            data-editor-command="italic"
+            aria-label="Курсив"
+          >
+            <em>I</em></button
+          ><button
+            type="button"
+            data-editor-command="insertUnorderedList"
+            aria-label="Маркированный список"
+          >
+            ☷</button
+          ><button
+            type="button"
+            data-editor-command="formatBlock"
+            data-editor-value="h2"
+            title="Заголовок раздела"
+          >
+            H
+          </button>
+        </div>
+        <div
+          id="editor-content"
+          class="editor-surface"
+          contenteditable="true"
+          role="textbox"
+          aria-multiline="true"
+        >
+          <p>Начните писать статью…</p>
+        </div>
+        <label class="form-field"
+          >Теги через запятую<input
+            class="form-control"
+            name="tags"
+            maxlength="500"
+            placeholder="космос, исследование" /></label
+        ><label class="form-field"
+          >Ссылка на источник<input
+            class="form-control"
+            type="url"
+            name="source_url"
+            placeholder="https://example.org/news" /></label
+        ><label class="form-field"
+          >Ссылка на изображение<input
+            class="form-control"
+            type="url"
+            name="image_url"
+            placeholder="https://example.org/photo.jpg" /></label
+        ><button class="primary-button form-submit" type="submit">
+          Отправить на модерацию
+        </button>
+      </form>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">Дайджест · новости с контекстом</div>
+      <nav class="footer-links">
+
+      </nav>
+      <small>2026</small>
+    </footer>
+    <script src="../assets/js/app.js" defer></script>
+  </body>
+</html>

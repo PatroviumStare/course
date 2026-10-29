@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Настройки — Дайджест</title>
+    <link rel="stylesheet" href="../assets/css/app.css" />
+  </head>
+  <body data-page="settings">
+    <header class="site-header">
+      <a class="wordmark" href="../index.html"
+        ><span class="brand-symbol">Д</span><span>ДАЙДЖЕСТ</span></a
+      ><a class="text-button" href="../dashboard/index.html">К панели</a
+      ><button
+        class="icon-button theme-toggle"
+        type="button"
+        aria-label="Переключить тему"
+        title="Переключить тему"
+      >
+        ◐</button
+      ><span id="account-actions"
+        ><a class="text-button" href="../login/index.html">Войти</a></span
+      >
+    </header>
+    <div class="flash-message" id="notice" role="status" hidden></div>
+    <main class="content-shell">
+      <p class="eyebrow">Аккаунт</p>
+      <h1>Настройки</h1>
+      <section class="settings-section">
+        <h2>Профиль</h2>
+        <form id="profile-form" enctype="multipart/form-data">
+          <label class="form-field"
+            >Имя<input
+              class="form-control"
+              name="name"
+              required
+              maxlength="100" /></label
+          ><label class="form-field"
+            >Описание профиля<textarea
+              class="form-control"
+              name="bio"
+              maxlength="600"
+            ></textarea></label
+          ><label class="form-field"
+            >Аватар<input
+              class="form-control"
+              type="file"
+              name="avatar"
+              accept="image/jpeg,image/png,image/webp,image/gif" /></label
+          ><label class="form-field"
+            >Темы автора (не более 3)<select class="form-control" id="profile-tags-select" name="profile_tags" multiple size="4"></select></label
+          ><button class="primary-button" type="submit">
+            Сохранить профиль
+          </button>
+        </form>
+      </section>
+      <section class="settings-section">
+        <h2>Безопасность</h2>
+        <form id="password-form">
+          <label class="form-field"
+            >Текущий пароль<input
+              class="form-control"
+              type="password"
+              name="current_password"
+              required /></label
+          ><label class="form-field"
+            >Новый пароль<input
+              class="form-control"
+              type="password"
+              name="new_password"
+              minlength="10"
+              required /></label
+          ><button class="outline-button" type="submit">Изменить пароль</button>
+        </form>
+        <label class="toggle-line"
+          ><input id="two-factor" type="checkbox" /> Двухфакторная
+          аутентификация <span class="metric">подготовленная опция</span></label
+        >
+        <h3>Активные устройства</h3>
+        <div class="session-list" id="session-list">
+          <p class="metric">Загрузка сессий…</p>
+        </div>
+        <button class="outline-button" id="logout-other" type="button">
+          Выйти на других устройствах
+        </button>
+      </section>
+      <section class="settings-section">
+        <h2>Конфиденциальность</h2>
+        <form id="privacy-form">
+          <label class="form-field"
+            >Кто видит мои комментарии<select
+              class="form-control"
+              name="comments_visibility"
+            >
+              <option value="everyone">Все пользователи</option>
+              <option value="followers">Только подписчики</option>
+              <option value="private">Никто</option>
+            </select></label
+          ><label class="form-field"
+            >Кто видит мои подписки<select
+              class="form-control"
+              name="follows_visibility"
+            >
+              <option value="everyone">Все пользователи</option>
+              <option value="followers">Только подписчики</option>
+              <option value="private">Никто</option>
+            </select></label
+          ><button class="primary-button" type="submit">
+            Сохранить приватность
+          </button>
+        </form>
+        <p class="form-note">
+          Администратор видит эти данные независимо от выбранной настройки.
+        </p>
+      </section>
+      <section class="settings-section danger-zone">
+        <h2>Удалить аккаунт</h2>
+        <p class="form-note">
+          Удаление необратимо. Статьи, комментарии, оценки и подписки аккаунта
+          будут удалены.
+        </p>
+        <button
+          class="outline-button danger-button"
+          id="delete-account-button"
+          type="button"
+        >
+          Удалить аккаунт
+        </button>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">Дайджест · новости с контекстом</div>
+      <nav class="footer-links">
+        ссылки
+      </nav>
+      <small>2026</small>
+    </footer>
+    <script src="../assets/js/app.js" defer></script>
+  </body>
+</html>

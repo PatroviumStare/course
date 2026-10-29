@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Новости науки, природы, культуры, спорта и Омской области."
+    />
+    <title>Дайджест — новости с контекстом</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+  </head>
+  <body data-page="feed">
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Дайджест, главная"
+        ><span class="brand-symbol">Д</span><span>ДАЙДЖЕСТ</span></a
+      >
+      <form
+        class="search-form"
+        id="search-form"
+        action="index.html"
+        method="get"
+        role="search"
+      >
+        <label class="visually-hidden" for="site-search">Поиск новостей</label
+        ><input
+          id="site-search"
+          type="search"
+          name="q"
+          placeholder="Поиск новостей"
+        /><button
+          class="icon-button search-button"
+          type="submit"
+          aria-label="Найти"
+        >
+          ⌕
+        </button>
+      </form>
+      <nav class="header-actions" aria-label="Главное меню">
+        <a class="rss-link" href="rss.xml">RSS</a
+        ><button
+          class="icon-button theme-toggle"
+          type="button"
+          aria-label="Переключить тему"
+          title="Переключить тему"
+        >
+          ◐</button
+        ><span id="account-actions"
+          ><a class="text-button" href="login/index.html">Войти</a>
+          <a class="primary-button compact" href="register/index.html"
+            >Регистрация</a
+          ></span
+        >
+      </nav>
+    </header>
+    <div class="flash-message" id="notice" role="status" hidden></div>
+    <main class="page-shell">
+      <section class="lead-story" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Новости без лишнего шума</p>
+          <h1 id="page-title">Факты, которые<br />помогают понять день.</h1>
+          <p class="lead-copy">
+            Наука, культура, спорт и жизнь регионов — в одном спокойном
+            новостном потоке.
+          </p>
+        </div>
+        <div class="lead-mark" aria-hidden="true"><span>Д</span><i></i></div>
+      </section>
+      <section class="feed-layout" aria-label="Лента новостей">
+        <aside class="feed-sidebar">
+          <h2>Рубрики</h2>
+          <nav id="category-nav" aria-label="Рубрики">
+            <a class="category-link is-active" href="index.html"
+              >Все новости <span>—</span></a
+            ><a class="category-link" href="index.html?category=science"
+              >Наука</a
+            ><a class="category-link" href="index.html?category=nature"
+              >Природа</a
+            ><a class="category-link" href="index.html?category=politics"
+              >Политика</a
+            ><a class="category-link" href="index.html?category=culture"
+              >Знаменитости и кино</a
+            ><a class="category-link" href="index.html?category=sport">Спорт</a
+            ><a class="category-link" href="index.html?category=esports"
+              >Киберспорт</a
+            ><a class="category-link" href="index.html?category=omsk"
+              >Омская область</a
+            >
+          </nav>
+          <div class="sidebar-note">
+            <span class="live-dot"></span> Свежая лента
+          </div>
+          <section class="popular-authors-section">
+            <h2>Популярные авторы</h2>
+            <div id="popular-authors">
+              <a class="popular-author" href="profile/index.html?id=1"
+                ><img src="assets/images/avatar-default.svg" alt="" /><span
+                  >Редакция Дайджеста</span
+                ><small>Автор новостного портала</small></a
+              >
+            </div>
+          </section>
+        </aside>
+        <div class="feed-main">
+          <div class="feed-toolbar">
+            <div>
+              <p class="eyebrow">Лента</p>
+              <h2 id="feed-title">Главное сегодня</h2>
+            </div>
+            <form class="sort-form" id="sort-form">
+              <label for="sort">Сортировка</label
+              ><select id="sort" name="sort">
+                <option value="newest">Сначала новые</option>
+                <option value="popular">Популярные</option>
+                <option value="oldest">Сначала старые</option>
+              </select>
+            </form>
+          </div>
+          <div class="article-list" id="article-list" aria-live="polite">
+            <article class="article-row">
+              <div class="article-copy">
+                <div class="article-meta">
+                  <span>Киберспорт</span><span>26.10.2026</span>
+                </div>
+                <h3>
+                  <a href="article/index.html?slug=ence-bankruptcy"
+                    >ENCE объявила о банкротстве и завершении деятельности</a
+                  >
+                </h3>
+                <p>
+                  Финская киберспортивная организация сообщила о намерении
+                  подать заявление о банкротстве после 13 лет работы.
+                </p>
+                <div class="article-byline">Редакция Дайджеста</div>
+              </div>
+              <a
+                class="article-thumb"
+                href="article/index.html?slug=ence-bankruptcy"
+                ><img
+                  src="assets/images/stories/esports.png"
+                  alt="Графическая обложка раздела киберспорта"
+              /></a>
+            </article>
+            <article class="article-row">
+              <div class="article-copy">
+                <div class="article-meta">
+                  <span>Наука</span><span>19.03.2025</span>
+                </div>
+                <h3>
+                  <a href="article/index.html?slug=euclid-first-data"
+                    >Обсерватория Euclid представила первые научные
+                    результаты</a
+                  >
+                </h3>
+                <p>
+                  Космический телескоп показал новые данные о галактиках и
+                  структуре Вселенной.
+                </p>
+                <div class="article-byline">Редакция Дайджеста</div>
+              </div>
+              <a
+                class="article-thumb"
+                href="article/index.html?slug=euclid-first-data"
+                ><img
+                  src="assets/images/stories/science.png"
+                  alt="Графическая обложка раздела науки"
+              /></a>
+            </article>
+            <article class="article-row">
+              <div class="article-copy">
+                <div class="article-meta">
+                  <span>Знаменитости и кино</span><span>03.03.2025</span>
+                </div>
+                <h3>
+                  <a href="article/index.html?slug=anora-five-oscars"
+                    >«Аноре» получила пять премий на церемонии «Оскар»</a
+                  >
+                </h3>
+                <p>
+                  Картина стала главным победителем 97-й церемонии Американской
+                  киноакадемии.
+                </p>
+                <div class="article-byline">Редакция Дайджеста</div>
+              </div>
+              <a
+                class="article-thumb"
+                href="article/index.html?slug=anora-five-oscars"
+                ><img
+                  src="assets/images/stories/culture.png"
+                  alt="Графическая обложка раздела кино"
+              /></a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-symbol">Д</span><span>Новости с контекстом.</span>
+      </div>
+
+      <small>Учебный проект · 2026</small>
+    </footer>
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>

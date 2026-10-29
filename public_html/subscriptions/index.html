@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Подписки — Дайджест</title>
+    <link rel="stylesheet" href="../assets/css/app.css" />
+  </head>
+  <body data-page="subscriptions">
+    <header class="site-header">
+      <a class="wordmark" href="../index.html"
+        ><span class="brand-symbol">Д</span><span>ДАЙДЖЕСТ</span></a
+      ><a class="text-button" href="../dashboard/index.html">К панели</a
+      ><button
+        class="icon-button theme-toggle"
+        type="button"
+        aria-label="Переключить тему"
+        title="Переключить тему"
+      >
+        ◐</button
+      ><span id="account-actions"
+        ><a class="text-button" href="../login/index.html">Войти</a></span
+      >
+    </header>
+    <div class="flash-message" id="notice" role="status" hidden></div>
+    <main class="content-shell">
+      <p class="eyebrow">Персональная лента</p>
+      <h1>Подписки</h1>
+      <p class="lead-copy">Рубрики и авторы, за которыми ведётся наблюдение.</p>
+      <section class="feed-layout">
+        <aside class="feed-sidebar">
+          <h2>Рубрики</h2><nav id="category-nav" aria-label="Рубрики"></nav><div id="subscription-categories" class="tag-list"></div>
+          <section class="popular-authors-section"><h2>Авторы в подписках</h2><div id="subscription-authors" class="profile-list"><span class="metric">Подписок пока нет.</span></div></section>
+        </aside>
+        <div class="feed-main">
+          <div class="feed-toolbar"><div><p class="eyebrow">Персональная лента</p><h2 id="feed-title">Публикации авторов</h2></div><form class="sort-form" id="sort-form"><label for="sort">Сортировка</label><select id="sort" name="sort"><option value="newest">Сначала новые</option><option value="popular">Популярные</option><option value="oldest">Сначала старые</option></select></form></div>
+          <div class="article-list" id="article-list"><p class="empty-state">Материалы авторов появятся здесь.</p></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">Дайджест · новости с контекстом</div>
+
+      <small>2026</small>
+    </footer>
+    <script src="../assets/js/app.js" defer></script>
+  </body>
+</html>

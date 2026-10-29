@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Панель управления — Дайджест</title>
+    <link rel="stylesheet" href="../assets/css/app.css" />
+  </head>
+  <body data-page="dashboard">
+    <header class="site-header">
+      <a class="wordmark" href="../index.html"
+        ><span class="brand-symbol">Д</span><span>ДАЙДЖЕСТ</span></a
+      ><a class="text-button" href="../index.html">К новостям</a
+      ><button
+        class="icon-button theme-toggle"
+        type="button"
+        aria-label="Переключить тему"
+        title="Переключить тему"
+      >
+        ◐</button
+      ><span id="account-actions"></span>
+    </header>
+    <div class="flash-message" id="notice" role="status" hidden></div>
+    <main class="content-shell">
+      <p class="eyebrow">Личный кабинет</p>
+      <h1 id="dashboard-greeting">Добро пожаловать</h1>
+      <p id="dashboard-role" class="lead-copy">
+        Состояние аккаунта и публикаций.
+      </p>
+      <p id="new-story-link" hidden>
+        <a class="primary-button" href="../editor/index.html"
+          >＋ Новая статья</a
+        >
+      </p>
+      <section id="stats-section">
+        <div class="dashboard-grid" id="dashboard-stats">
+          <div class="stat-panel"><span>Материалы</span><strong>—</strong></div>
+          <div class="stat-panel"><span>Подписки</span><strong>—</strong></div>
+        </div>
+      </section>
+      <section id="moderation-section" hidden>
+        <p class="eyebrow">Редакция</p>
+        <h2>Очередь модерации</h2>
+        <div class="article-list" id="pending-list"></div>
+      </section>
+      <section id="publications-section" hidden>
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow">Материалы</p>
+            <h2>Публикации</h2>
+          </div>
+        </div>
+        <div class="collection-tools">
+          <label class="collection-search"><span class="visually-hidden">Поиск публикаций</span><input class="form-control" id="publications-search" type="search" placeholder="Найти статью"></label>
+          <label class="toggle-line" id="own-publications-filter" hidden><input id="publications-own-only" type="checkbox"> Только мои публикации</label>
+        </div>
+        <div class="article-list" id="publications-list"></div>
+        <button class="outline-button collection-toggle collection-toggle-bottom" id="publications-toggle" type="button" aria-expanded="false" hidden>⌄</button>
+      </section>
+      <section>
+        <p class="eyebrow">Персональная лента</p>
+        <h2>Подписки</h2>
+        <p>
+          <a class="outline-button" href="../subscriptions/index.html"
+            >Открыть подписки</a
+          >
+        </p>
+      </section>
+      <section>
+        <p class="eyebrow">Ваши материалы</p>
+        <h2>Недавно просмотрено</h2>
+        <div class="article-list" id="my-history">
+          <p class="metric">История просмотров появится после чтения.</p>
+        </div>
+      </section>
+      <section id="server-section" hidden>
+        <p class="eyebrow">Показатели хоста</p>
+        <h2>Состояние сервера</h2>
+        <div class="dashboard-grid" id="server-stats"></div>
+      </section>
+      <section id="popular-section" hidden>
+        <p class="eyebrow">Контент</p>
+        <h2>Самые читаемые</h2>
+        <div class="article-list" id="popular-list"></div>
+      </section>
+      <section id="users-section" hidden>
+        <div class="section-heading-row">
+          <div><p class="eyebrow">Доступ</p><h2>Роли пользователей</h2></div>
+        </div>
+        <label class="collection-search"><span class="visually-hidden">Поиск пользователей</span><input class="form-control" id="users-search" type="search" placeholder="Найти пользователя"></label>
+        <div class="article-list" id="users-list"></div>
+        <button class="outline-button collection-toggle collection-toggle-bottom" id="users-toggle" type="button" aria-expanded="false" hidden>⌄</button>
+      </section>
+      <section id="banned-content-section" hidden>
+        <p class="eyebrow">Блокировки</p>
+        <h2>Материалы на проверке после блокировки</h2>
+        <div class="article-list" id="banned-content-list"></div>
+      </section>
+      <section id="account-switcher-slot" hidden></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">Дайджест · новости с контекстом</div>
+      <nav class="footer-links">
+
+      </nav>
+      <small>2026</small>
+    </footer>
+    <script src="../assets/js/app.js" defer></script>
+  </body>
+</html>

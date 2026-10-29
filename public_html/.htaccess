@@ -1,0 +1,30 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{THE_REQUEST} \s/+server/ [NC]
+    RewriteRule ^server/ - [F,L]
+    RewriteRule ^api/articles(?:\.json)?/?$ server/api/articles.php [L,QSA]
+    RewriteRule ^api/categories/?$ server/api/categories.php [L,QSA]
+    RewriteRule ^api/auth/?$ server/api/auth.php [L,QSA]
+    RewriteRule ^api/article/?$ server/api/article.php [L,QSA]
+    RewriteRule ^api/dashboard/?$ server/api/dashboard.php [L,QSA]
+    RewriteRule ^api/actions/?$ server/api/actions.php [L,QSA]
+    RewriteRule ^api/edit-article/?$ server/api/edit-article.php [L,QSA]
+    RewriteRule ^api/account/?$ server/api/account.php [L,QSA]
+    RewriteRule ^api/random-article/?$ server/api/random.php [L,QSA]
+    RewriteRule ^api/metrics/?$ server/api/metrics.php [L,QSA]
+    RewriteRule ^rss\.xml$ server/rss.php [L,QSA]
+    RewriteRule ^article/[^/]+/?$ article/index.html [L]
+    RewriteRule ^tag/[^/]+/?$ tag/index.html [L]
+    RewriteRule ^profile/[^/]+/?$ profile/index.html [L]
+    RewriteRule ^(login|register|dashboard|editor|profile|subscriptions|settings)/?$ $1/index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
